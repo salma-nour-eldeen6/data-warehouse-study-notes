@@ -205,9 +205,7 @@ Users rarely retrieve a single row. They retrieve **patterns across many rows**,
 | **Purpose** | Handling large numbers of transactional operations in real time | Complex queries and data analysis for insights |
 | **Focus** | Data consistency and reliability for daily operations | Multidimensional analysis across vast datasets |
 
-> **Quick Summary**
-> - **OLTP DBs** → Normalize → Good for transactions
-> - **OLAP / DWH** → Denormalize → Good for analysis and reporting
+ 
 
 ---
 
