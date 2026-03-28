@@ -1,1 +1,0 @@
-# Dimensional Modeling Primer
