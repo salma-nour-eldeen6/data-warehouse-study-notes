@@ -14,7 +14,7 @@ It becomes meaningful and useful.
 Deeper understanding extracted from information.
 It represents **hidden patterns and insights**.
 
-![image.png](img\introduction\image.png)
+![image.png](img/introduction/image.png)
 
 <aside>
 
@@ -56,7 +56,7 @@ Most common; good for exact matches or range queries.
 
 - B-trees, short for *balanced trees*, are the most common type of database index. A **B-tree index** is an ordered list of values divided into ranges. By associating a key with a row or range of rows, B-trees provide excellent retrieval performance for a wide range of queries, including exact match and range searches.-
     
-    ![image.png](img\introduction\image%201.png)
+    ![image.png](img/introduction/image%201.png)
     
     ---
     
@@ -129,7 +129,7 @@ In addition, because all the joins have been resolved at materialized view refre
 
 ---
 
-![image.png](img\introduction\image%202.png)
+![image.png](img/introduction/image%202.png)
 
 Materialized views can be set to refresh manually, on a set schedule, or *based on the database detecting a change in data from one of the underlying tables*. Materialized views can be incrementally updated by combining them with materialized view logs, which **act as change data capture sources** on the underlying tables.
 
@@ -236,7 +236,7 @@ The goal here is **understanding**, not execution.
 
 ---
 
-![image.png](img\introduction\image%203.png)
+![image.png](img/introduction/image%203.png)
 
 https://www.geeksforgeeks.org/dbms/difference-between-olap-and-oltp-in-dbms/
 
@@ -257,7 +257,7 @@ OLAP (Online Analytical Processing) and OLTP (Online Transaction Processing) are
 
 https://database.guide/what-is-normalization/
 
-![image.png](img\introduction\image%204.png)
+![image.png](img/introduction/image%204.png)
 
 ## **Problems of Normalization in OLAP / DWH**
 
