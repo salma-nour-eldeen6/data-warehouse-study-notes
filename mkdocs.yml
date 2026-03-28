@@ -1,0 +1,6 @@
+site_name: Data Warehouse Notes
+theme:
+  name: material
+
+nav:
+  - Introduction: ch-1/1_introduction.md
