@@ -1,0 +1,1158 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Introduction - Data Warehouse Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Data Warehouse Notes" class="md-header__button md-logo" aria-label="Data Warehouse Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Data Warehouse Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Data Warehouse Notes" class="md-nav__button md-logo" aria-label="Data Warehouse Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Data Warehouse Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-information-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data → Information → Knowledge
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database Server
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Database Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Main Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Index
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Index">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-indexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types of Indexes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Indexes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#b-tree-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B-Tree Index
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bitmap-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bitmap Index
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#views" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Views
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#materialized-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Materialized Views
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#different-information-worlds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Different Information Worlds
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Different Information Worlds">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operational-systems-where-data-is-created" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operational Systems – Where Data Is Created
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-warehouse-where-data-is-analyzed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Warehouse – Where Data Is Analyzed
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-normalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Normalization?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is Normalization?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problems-of-normalization-in-olap-dwh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problems of Normalization in OLAP / DWH
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oltp-vs-olap-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OLTP vs OLAP: Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-information-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data → Information → Knowledge
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database Server
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Database Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Main Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Index
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Index">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-indexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types of Indexes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Indexes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#b-tree-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B-Tree Index
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bitmap-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bitmap Index
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#views" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Views
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#materialized-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Materialized Views
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#different-information-worlds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Different Information Worlds
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Different Information Worlds">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operational-systems-where-data-is-created" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operational Systems – Where Data Is Created
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-warehouse-where-data-is-analyzed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Warehouse – Where Data Is Analyzed
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-normalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Normalization?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is Normalization?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problems-of-normalization-in-olap-dwh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problems of Normalization in OLAP / DWH
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oltp-vs-olap-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OLTP vs OLAP: Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="introduction">Introduction</h1>
+<h2 id="data-information-knowledge">Data → Information → Knowledge</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Concept</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Data</strong></td>
+<td style="text-align: left;">Raw facts with no meaning yet.<br><em>Example: numbers, text, logs</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Information</strong></td>
+<td style="text-align: left;">Data after processing and organizing it.<br>It becomes meaningful and useful.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Knowledge</strong></td>
+<td style="text-align: left;">Deeper understanding extracted from information.<br>It represents <strong>hidden patterns and insights</strong>.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="image.png" src="../img/introduction/image.png" /></p>
+<blockquote>
+<p><strong>📌 Key Points</strong>
+- <strong>Knowledge = hidden patterns</strong> — When you analyze information and discover patterns, you create knowledge.
+- When you <strong>share knowledge</strong>, it becomes <strong>information for others</strong> (because they receive it as something structured and understandable).
+- You can <strong>process information multiple times</strong>, and it can still remain <strong>information</strong> unless you discover new insights (knowledge).</p>
+</blockquote>
+<hr />
+<h2 id="database-server">Database Server</h2>
+<p>A <strong>DB Server</strong> is a server responsible for storing, managing, and retrieving data efficiently and securely. It <strong>allows multiple users or applications to access the same data simultaneously</strong>, while ensuring consistency, security, and integrity. It is the core of any system that relies on structured data.</p>
+<h3 id="main-functions">Main Functions</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Function</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Storage</strong></td>
+<td style="text-align: left;">Store data in <strong>tables</strong> in an organized way</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CRUD Operations</strong></td>
+<td style="text-align: left;">Create, Read, Update, Delete</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Transaction Management</strong></td>
+<td style="text-align: left;">Ensure <strong>data integrity</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Concurrency</strong></td>
+<td style="text-align: left;">Handle <strong>multi-user access</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Backup &amp; Recovery</strong></td>
+<td style="text-align: left;">Manage backups and recovery</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="index">Index</h2>
+<p>An <strong>Index</strong> is a <strong>database object</strong> that exists independently of the table data and <strong>speeds up data retrieval</strong> by providing a fast lookup mechanism, without scanning the entire table. It can be created or dropped without physically affecting the table.</p>
+<h3 id="types-of-indexes">Types of Indexes</h3>
+<h4 id="b-tree-index">B-Tree Index</h4>
+<p>Most common; good for exact matches or range queries.</p>
+<blockquote>
+<p>B-trees, short for <em>balanced trees</em>, are the most common type of database index. A <strong>B-tree index</strong> is an ordered list of values divided into ranges. By associating a key with a row or range of rows, B-trees provide excellent retrieval performance for a wide range of queries, including exact match and range searches.</p>
+</blockquote>
+<p><img alt="image.png" src="../img/introduction/image%201.png" /></p>
+<hr />
+<h4 id="bitmap-index">Bitmap Index</h4>
+<p>Used in OLAP for columns with <strong>low cardinality</strong> (few distinct values, like Gender or Status).</p>
+<ul>
+<li>A Bitmap Index is like a map of bits for each value in a column, which helps the database find rows faster without scanning the entire table.</li>
+<li>In a <strong>bitmap index</strong>, the database stores a bitmap for each index key. In a conventional B-tree index, one index entry points to a single row. In a bitmap index, each index key stores pointers to multiple rows.</li>
+</ul>
+<p><strong>When to use bitmap indexes:</strong>
+- The indexed columns have low <a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/cncpt/Chunk806120860.html#GUID-5CD22620-6D7A-40DC-BA09-EE3B5339C7F8">cardinality</a> (number of distinct values is small compared to table rows).
+- The indexed table is either read-only or not subject to significant modification by DML statements.</p>
+<p><strong>Example:</strong> To count all female customers, the database can check the bitmap for 'F' directly instead of scanning all rows.</p>
+<p><strong>Sample Bitmap for One Column</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Value</th>
+<th style="text-align: center;">Row 1</th>
+<th style="text-align: center;">Row 2</th>
+<th style="text-align: center;">Row 3</th>
+<th style="text-align: center;">Row 4</th>
+<th style="text-align: center;">Row 5</th>
+<th style="text-align: center;">Row 6</th>
+<th style="text-align: center;">Row 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>M</code></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>F</code></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<p>A mapping function converts each bit in the bitmap to a rowid of the <code>customers</code> table. Each bit value depends on the values of the corresponding row in the table.</p>
+<p>For example, the bitmap for the <code>M</code> value contains a <code>1</code> as its first bit because the gender is <code>M</code> in the first row of the <code>customers</code> table. The bitmap <code>cust_gender='M'</code> has a <code>0</code> for the bits in rows 2, 6, and 7 because these rows do not contain <code>M</code> as their value.</p>
+<hr />
+<p><strong>Sample Bitmap for Two Columns</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Value</th>
+<th style="text-align: center;">Row 1</th>
+<th style="text-align: center;">Row 2</th>
+<th style="text-align: center;">Row 3</th>
+<th style="text-align: center;">Row 4</th>
+<th style="text-align: center;">Row 5</th>
+<th style="text-align: center;">Row 6</th>
+<th style="text-align: center;">Row 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>M</code></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>F</code></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>single</code></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>divorced</code></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>single</code> or <code>divorced</code>, and <code>F</code></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<p>Bitmap indexing efficiently merges indexes that correspond to several conditions in a <code>WHERE</code> clause. Rows that satisfy some, but not all, conditions are filtered out before the table itself is accessed. This technique improves response time, often dramatically.</p>
+<hr />
+<blockquote>
+<p><strong>ℹ️ Note:</strong> The DB Server creates and maintains the index. Every time data changes (Insert/Update/Delete), the server automatically updates the index.</p>
+</blockquote>
+<p><strong>Source:</strong> <a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/cncpt/indexes-and-index-organized-tables.html#GUID-B15C4817-7748-456D-9740-8B9628AF9F47">Oracle Database Concepts - Indexes</a></p>
+<hr />
+<h2 id="views">Views</h2>
+<p>They evaluate the data in the tables underlying the view definition <strong>at the time the view is queried</strong>. It is a logical view of your tables, with no data stored anywhere else.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Aspect</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Upside</strong></td>
+<td style="text-align: left;">Always returns the latest data</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Downside</strong></td>
+<td style="text-align: left;">Performance depends on the underlying SELECT statement. If it joins many tables or uses non-indexed columns, the view could perform poorly.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="materialized-views">Materialized Views</h2>
+<p>Similar to regular views (logical view based on a SELECT statement), but the <strong>underlying query result set has been saved to a table</strong>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Aspect</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Upside</strong></td>
+<td style="text-align: left;">Querying a materialized view means querying a table, which may also be indexed. Joins are resolved at refresh time, so you pay the join cost once. With query rewrite enabled, Oracle can optimize queries to read from the materialized view automatically.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Downside</strong></td>
+<td style="text-align: left;">Data is only as up-to-date as the last refresh.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="image.png" src="../img/introduction/image%202.png" /></p>
+<p><strong>Refresh Options:</strong>
+- Manual refresh
+- Scheduled refresh
+- Automatic refresh based on data changes (using materialized view logs as change data capture sources)</p>
+<p><strong>Use Case:</strong> Materialized views are most often used in data warehousing / business intelligence applications where querying large fact tables with millions or billions of rows would result in unusable response times.</p>
+<p><strong>Source:</strong> <a href="https://stackoverflow.com/questions/93539/what-is-the-difference-between-views-and-materialized-views-in-oracle">Stack Overflow - Difference between Views and Materialized Views</a></p>
+<hr />
+<h2 id="different-information-worlds">Different Information Worlds</h2>
+<p>An organization's information usually exists in <strong>two very different worlds</strong>:</p>
+<ol>
+<li><strong>Operational Systems (OLTP – Online Transaction Processing)</strong></li>
+<li><strong>Data Warehouse (OLAP – Online Analytical Processing)</strong></li>
+</ol>
+<p>They may store the same business data, but they serve completely different purposes.</p>
+<hr />
+<h3 id="operational-systems-where-data-is-created">Operational Systems – Where Data Is Created</h3>
+<p>Operational systems are the systems that run the daily business.</p>
+<p><strong>Examples:</strong>
+- Taking orders
+- Registering customers
+- Logging complaints
+- Processing payments</p>
+<p><strong>Characteristics:</strong>
+- Built for speed, accuracy, and handling one transaction at a time
+- Support repetitive tasks
+- Users interact with <strong>one record at a time</strong></p>
+<blockquote>
+<p>Think of a cashier scanning one product, or a support agent updating one complaint.</p>
+</blockquote>
+<p><strong>Goal:</strong> <strong>Execution</strong>, not analysis</p>
+<p><strong>Technical Features:</strong>
+- Highly normalized databases (often 3NF)
+- Optimized for INSERT, UPDATE, DELETE operations
+- Short, fast transactions</p>
+<blockquote>
+<p>This is the "engine room" of the company.</p>
+</blockquote>
+<hr />
+<h3 id="data-warehouse-where-data-is-analyzed">Data Warehouse – Where Data Is Analyzed</h3>
+<p>The data warehouse serves a completely different audience.</p>
+<p><strong>Users:</strong>
+- Analysts
+- Executives
+- Managers
+- Data scientists</p>
+<p><strong>Typical Questions:</strong>
+- How many orders were placed this week vs last week?
+- Why did customer churn increase?
+- Which product category is growing fastest?</p>
+<p><strong>Requirements:</strong>
+- Scanning thousands or millions of rows
+- Aggregating data
+- Comparing across time
+- Summarizing patterns</p>
+<p>Users rarely retrieve a single row. They retrieve <strong>patterns across many rows</strong>, and their questions constantly change.</p>
+<blockquote>
+<p><strong>Key Distinction:</strong> Operational tasks are repetitive. Analytical questions are unpredictable.</p>
+</blockquote>
+<p><strong>Goal:</strong> <strong>Understanding</strong>, not execution</p>
+<hr />
+<p><img alt="image.png" src="../img/introduction/image%203.png" /></p>
+<p><strong>Source:</strong> <a href="https://www.geeksforgeeks.org/dbms/difference-between-olap-and-oltp-in-dbms/">GeeksforGeeks - Difference between OLAP and OLTP</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Aspect</th>
+<th style="text-align: left;">OLTP</th>
+<th style="text-align: left;">OLAP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Purpose</strong></td>
+<td style="text-align: left;">Handling large numbers of transactional operations in real time</td>
+<td style="text-align: left;">Complex queries and data analysis for insights</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Focus</strong></td>
+<td style="text-align: left;">Data consistency and reliability for daily operations</td>
+<td style="text-align: left;">Multidimensional analysis across vast datasets</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Quick Summary</strong>
+- <strong>OLTP DBs</strong> → Normalize → Good for transactions
+- <strong>OLAP / DWH</strong> → Denormalize → Good for analysis and reporting</p>
+</blockquote>
+<hr />
+<h2 id="what-is-normalization">What is Normalization?</h2>
+<p><em>Normalization</em> is the process of organizing a database to reduce redundancy and improve <a href="https://database.guide/what-is-data-integrity/">data integrity</a>.</p>
+<p><img alt="image.png" src="../img/introduction/image%204.png" /></p>
+<p><strong>Source:</strong> <a href="https://database.guide/what-is-normalization/">Database.Guide - What is Normalization?</a></p>
+<hr />
+<h3 id="problems-of-normalization-in-olap-dwh">Problems of Normalization in OLAP / DWH</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Problem</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Too many joins</strong></td>
+<td style="text-align: left;">Queries need to combine many tables → slower performance for large datasets</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Complex queries</strong></td>
+<td style="text-align: left;">Harder to write and maintain SQL queries</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Not ideal for reporting</strong></td>
+<td style="text-align: left;">Analytical queries prefer fewer tables → fewer joins = faster scans</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="oltp-vs-olap-summary">OLTP vs OLAP: Summary</h2>
+<p>Even if both systems use the same business data, they differ in:</p>
+<ul>
+<li>User type</li>
+<li>Query behavior</li>
+<li>Performance requirements</li>
+<li>Data structure</li>
+<li>Frequency of change</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Aspect</th>
+<th style="text-align: left;">Operational Systems (OLTP)</th>
+<th style="text-align: left;">Data Warehouse (OLAP)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Focus</strong></td>
+<td style="text-align: left;">Current state</td>
+<td style="text-align: left;">History</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Optimized for</strong></td>
+<td style="text-align: left;">Writes (INSERT/UPDATE/DELETE)</td>
+<td style="text-align: left;">Reads (SELECT queries)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Transaction type</strong></td>
+<td style="text-align: left;">Small, fast transactions</td>
+<td style="text-align: left;">Large, complex queries</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Key Insight:</strong> This is not just a hardware separation issue. Moving an operational database to another server does not automatically transform it into a data warehouse. If the structure remains transaction-oriented:
+- Queries become complex
+- Joins multiply
+- Performance degrades
+- Business users struggle</p>
+<p><strong>Bottom Line:</strong> True analytical environments must be designed specifically for analytical needs.</p>
+<ul>
+<li><strong>OLTP</strong> = "doing the work" (write)</li>
+<li><strong>OLAP</strong> = "analyzing the work" (read)</li>
+</ul>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
