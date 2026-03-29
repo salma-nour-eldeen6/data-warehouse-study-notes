@@ -4,3 +4,4 @@ theme:
 
 nav:
   - Introduction: ch-1/1_introduction.md
+  - Data Warehouse Goals And Components: ch-1/2_data_warehouse.md
